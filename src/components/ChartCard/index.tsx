@@ -33,7 +33,7 @@ function ChartCard({ option, style }: ChartCardProps) {
   // 当 option 变化时更新图表
   useEffect(() => {
     if (instanceRef.current) {
-      instanceRef.current.setOption(option, true); // notMerge=true 避免合并问题
+      instanceRef.current.setOption(option, true); // 优化：notMerge=true 避免合并问题
     }
   }, [option]);
 
